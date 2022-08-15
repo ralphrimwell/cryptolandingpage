@@ -4,19 +4,14 @@ import styled from "styled-components";
 import Card from "../Card";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    text-align: left;
+    max-width: 500px;
+    
 `
 
-const GamesContainer = styled.div`
-  padding: 20px;
-  background-color: blue;
-  height: 2000px;
-  width: 1000px;
-  display: flex;
-  justify-content: center;
-  
+
+const Description = styled.p`
+    color: #bbbbbb;
 `
 
 const Header = styled.h1`
@@ -25,18 +20,13 @@ const Header = styled.h1`
     color: white;
 `
 
-const SecondSection = () => {
+const AboutSection = () => {
     return (
       <>
 
         <Container>
-        <Header>What features do we provide?</Header>
-
-          <GamesContainer>
-            <Card name='gwewge'/>
-            <Card name='willy'/>
-
-          </GamesContainer>
+        <Header>About Cryotrader</Header>
+          <Description>Cryotrader is a fully automated cryptocurrency trading bot, designed to maximize profits while maintaining reliability</Description>
           
         </Container>
 
@@ -45,5 +35,5 @@ const SecondSection = () => {
     )
   }
   
-  export default SecondSection;
+  export default AboutSection;
   

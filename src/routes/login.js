@@ -2,7 +2,6 @@ import { FormContainer, SplitScreen, LeftSide, RightSide, FormTitle } from "../c
 import { PasswordInput, Input, Button, TextInput, Title, Text, Checkbox, LoadingOverlay, Group } from '@mantine/core';
 import { At } from 'tabler-icons-react';
 import { FcGoogle } from 'react-icons/fc'
-import auth from "../auth";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
@@ -18,7 +17,6 @@ const Login = () => {
 
         <RightSide>
           <FormContainer>
-            <div style = {{position: 'relative'}}>
             <LoadingOverlay visible = {visible} />
             <Text weight={700} order={6} color="dimmed">WELCOME BACK</Text >
 
@@ -45,21 +43,12 @@ const Login = () => {
             />
             <Checkbox mt="md" label="Stay logged in" />
 
-            <Button  mt="md" fullWidth onClick={() => {
-              auth.login(() => {
-
-                navigate("/dashboard");
-                setVisible((v) => !v);
-              });
-            }}
-            
-            >
+            <Button  mt="md" fullWidth >
               Log in
             </Button>
             <Button  onClickmt="md" fullWidth variant="outline" leftIcon={<FcGoogle />}>
               Log in with google
             </Button>
-            </div>
             
           </FormContainer>
         </RightSide>
@@ -72,4 +61,3 @@ const Login = () => {
 }
 
 export default Login;
-

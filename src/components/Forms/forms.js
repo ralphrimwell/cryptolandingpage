@@ -2,15 +2,15 @@ import styled from "styled-components";
 import image from "../../images/nobg.png"; 
 
 export const FormContainer = styled.div`
-    text-align: left;
     max-width: 500px;
-    margin-right: 600px;
-
+    margin: 0px 45px 0px;
+    height: 550px;
+    flex-grow: 1;
+    padding: 0px 30px 0px;
 `
 
 export const imagecover = styled.img`
-
-    background-image: url(https://ui-cdn.digitalocean.com/registration/565b0d2/static/media/serverless-bg.0dfa2d2….svg);
+background-image: url(https://ui-cdn.digitalocean.com/registration/565b0d2/static/media/serverless-bg.0dfa2d2….svg);
     background-position: center center;
     background-color: rgb(245, 249, 255);
     background-size: cover;
@@ -19,14 +19,7 @@ export const imagecover = styled.img`
 export const SplitScreen = styled.div`
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-
-    align-items: center;
-    text-align: center;
 `
-
 export const LeftSide = styled.div`
     height: 100vh;
     width: 55%;

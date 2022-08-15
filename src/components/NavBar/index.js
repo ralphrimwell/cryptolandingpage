@@ -17,16 +17,16 @@ const NavBar = () => {
             <SideBar isOpen={isOpen} toggle={toggleMenu} />
             <Nav>
                 <NavBarContainer>
-                    <NavLogo to='/'>iliad.vip</NavLogo>
+                    <NavLogo to='/'>Cryotrader</NavLogo>
                     <MobileIcon onClick={toggleMenu}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to='/'>About</NavLinks>
+                            <NavLinks to='/servers'>Servers</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/'>Pricing</NavLinks>
+                            <NavLinks to='/donate'>Donate</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to='/login'>Login</NavLinks>

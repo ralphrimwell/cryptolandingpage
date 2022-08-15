@@ -9,7 +9,7 @@ import auth from "./auth";
 import { Navigate } from 'react-router-dom';
 import Index from "./routes/index"
 import Login from "./routes/login";
-import Register from "./routes/register";
+import Servers from "./routes/servers";
 
 
 function App() {
@@ -27,13 +27,11 @@ function App() {
     // },
 
     { path: '/', element: <Index /> },
-    {
-      path: 'login',
-      element: !auth.isAuthenticated ? <Login /> : <Navigate to="/dashboard" />,
+    { path: '/login', element: <Login /> },
 
-    },
+    { path: '/servers', element: <Servers /> },
+    
 
-    { path: 'register', element: <Register/> },
 
   ])
 
