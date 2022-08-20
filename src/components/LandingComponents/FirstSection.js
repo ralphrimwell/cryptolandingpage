@@ -11,26 +11,17 @@ export const Container = styled.div`
     justify-content: center;
 
     flex-direction: column;
-    max-width: 500px;
-    margin-left: 150px;
+    max-width: 600px;
+    padding: 0 150px;
 `
 
-
-export const SplitScreen = styled.div`
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-
-    align-items: center;
-    text-align: center;
-`
 
 const Header = styled.h1`
     font-weight: bold;
-    font-size: 50px;
+    font-size: 70px;
     color: white;
+    margin-bottom: 0.25em;
+
 `
 
 const Description = styled.p`
@@ -39,7 +30,7 @@ const Description = styled.p`
 
 const Character = styled.div`
     position:absolute;
-    background-image: linear-gradient(to bottom, transparent 85%, #000000 100%), url(${image});
+    background-image: linear-gradient(to 10%, transparent 85%, #000000 100%), url(${image});
     z-index: -1;
     width: 100%;
     height: 100%;

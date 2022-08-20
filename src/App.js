@@ -7,9 +7,10 @@ import {
 } from "react-router-dom";
 import auth from "./auth";
 import { Navigate } from 'react-router-dom';
-import Index from "./routes/index"
+import Landing from "./routes/landing"
 import Login from "./routes/login";
 import Servers from "./routes/servers";
+import NavBar from "./components/NavBar";
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
     //   ]
     // },
 
-    { path: '/', element: <Index /> },
+    { path: '/', element: <Landing /> },
     { path: '/login', element: <Login /> },
 
     { path: '/servers', element: <Servers /> },
@@ -41,6 +42,7 @@ function App() {
 const AppWrapper = () => {
   return (
     <Router>
+      <NavBar/>
       <App />
     </Router>
   );

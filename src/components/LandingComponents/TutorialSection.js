@@ -23,7 +23,11 @@ const Header = styled.h1`
     margin-bottom: 0;
 `
 
-const AboutSection = () => {
+const StepSection = styled.div`
+    height: 25vh;
+`
+
+const TutorialSection = () => {
     return (
       <>
 
@@ -43,5 +47,5 @@ const AboutSection = () => {
     )
   }
   
-  export default AboutSection;
+  export default TutorialSection;
   
