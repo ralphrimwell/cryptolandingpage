@@ -13,7 +13,6 @@ export const Container = styled.div`
     align-items: center;
     padding: 0 150px;
     background-color: #3c3c3c;
-    margin-top: 100px;
 `
 
 const CardsContainer = styled.div`

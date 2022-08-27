@@ -1,15 +1,29 @@
 import styled from "styled-components";
 
 
-export const Container = styled.div`
-    text-align: left;
+const StepContainer = styled.div`
     display: flex;
-    display: flex;
+    align-items: center;
+    gap: 50px;
     justify-content: center;
+    margin: 50px 0;
+    :nth-child(odd) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+`
+
+const Container = styled.div`
+    background-color: #131313;
+    display: flex;
     flex-direction: column;
     padding: 0 150px;
-    background-color: #131313;
-    height: 30vh;
+
+`
+
+const StepTextContainer = styled.div`
+    max-width: 500px;
+    gap: 20px;
 `
 
 const Description = styled.p`
@@ -23,29 +37,57 @@ const Header = styled.h1`
     margin-bottom: 0;
 `
 
-const StepSection = styled.div`
-    height: 25vh;
+const Placeholderimg = styled.div`
+  background-color: blueviolet;
+  height: 400px;
+  width: 700px;
 `
 
-const TutorialSection = () => {
-    return (
-      <>
-
-        <Container>
-        <Header>About Cryotrader</Header>
-        <Description>Cryotrader is a web based crypto curreny trading bot that automatically chooses the best times
-          to sell and buy. {'\n'}
-
-          After logging in, you can configure the bot to your liking then begin. While running it will present you with all the 
-          neccessary information requireed to monitor the bot. 
-        </Description>
-          
-        </Container>
-
-      </>
-  
-    )
+const steps = [
+  {
+    "header": "Step 1",
+    "description": "We don't take any fees on your trades!",
+    "image": "path"
+  },
+  {
+    "header": "Step 2",
+    "description": "We don't take any fees on your trades!",
+    "image": "path"
+  },
+  {
+    "header": "Step 3",
+    "description": "We don't take any fees on your trades!",
+    "image": "path"
   }
-  
-  export default TutorialSection;
-  
+
+]
+
+const Step = (props) => {
+  return (
+    <>
+     <StepContainer>
+          <StepTextContainer>
+            <Header>{props.header}</Header>
+            <Description>{props.description}</Description>
+          </StepTextContainer>
+          <Placeholderimg />
+        </StepContainer>
+    </>
+  )
+}
+
+const AboutSection = () => {
+  return (
+    <>
+      <Container>
+        <Header>Easy and intuitive</Header>
+        {steps.map((step) => <Step {...step} />)}
+      </Container>
+
+
+    </>
+
+  )
+}
+
+export default AboutSection;

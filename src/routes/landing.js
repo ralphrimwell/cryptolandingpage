@@ -3,6 +3,8 @@ import FeaturesSection from "../components/LandingComponents/FeaturesSection";
 import styled from "styled-components";
 import AboutSection from "../components/LandingComponents/AboutSection";
 import PricingSecion from "../components/LandingComponents/PricingSection";
+import TutorialSection from "../components/LandingComponents/TutorialSection";
+import ReviewSection from "../components/LandingComponents/ReviewSection";
 
 const Space = styled.div`
     height: 200px;
@@ -30,9 +32,9 @@ const Landing = () => {
       <Circle width="500px" height="500px"/>
       
       <FirstSection/>
-      <AboutSection/>
       <FeaturesSection/>
-      <PricingSecion/>
+      <TutorialSection/>
+      <ReviewSection/>
     </>
 
   )

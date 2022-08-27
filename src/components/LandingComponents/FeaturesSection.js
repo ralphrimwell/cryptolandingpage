@@ -11,7 +11,6 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0 150px;
-    padding-top: 50px;
   
 `
 

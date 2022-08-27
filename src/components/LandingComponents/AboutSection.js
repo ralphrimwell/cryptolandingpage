@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
 
-export const Container = styled.div`
+const AboutContainer = styled.div`
     text-align: left;
     display: flex;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
+    margin-left: auto;
     padding: 0 150px;
+    max-width: 500px;
+    
+
+`
+
+const Container = styled.div`
     background-color: #131313;
-    height: 30vh;
+    height: 75vh;
+    display: flex;
+    align-items: center;
 `
 
 const Description = styled.p`
@@ -26,17 +33,19 @@ const Header = styled.h1`
 const AboutSection = () => {
     return (
       <>
-
         <Container>
-        <Header>About Cryotrader</Header>
-        <Description>Cryotrader is a web based crypto curreny trading bot that automatically chooses the best times
-          to sell and buy. {'\n'}
+          <AboutContainer>
+          <Header>About Cryotrader</Header>
+          <Description>Cryotrader is a web based crypto curreny trading bot that automatically chooses the best times
+            to sell and buy. {'\n'}
 
-          After logging in, you can configure the bot to your liking then begin. While running it will present you with all the 
-          neccessary information requireed to monitor the bot. 
-        </Description>
-          
+            After logging in, you can configure the bot to your liking then begin. While running it will present you with all the 
+            neccessary information requireed to monitor the bot. 
+          </Description>
+            
+          </AboutContainer>
         </Container>
+
 
       </>
   
